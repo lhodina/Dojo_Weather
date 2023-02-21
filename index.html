@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Weather</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="header">
+        <div id="header-content">
+            <h1>DojoWeather</h1>
+            <ul id="cities">
+                <li class="city" onclick="alert('It looks like you\'re in Burbank. Enjoy the weather, movie star.')">Burbank</li>
+                <li class="city" onclick="alert('It looks like you\'re in Chicago. Almost none of this is going to be good news.')">Chicago</li>
+                <li class="city"  onclick="alert('It looks like you\'re in Dallas. Why?')">Dallas </li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div id="current-location-banner">
+            <h2>San Jose</h2>
+            <span id="choose-scale">show temperature in
+                <form id="scale">
+                    <select id="current-scale" onchange="convertTemps()">
+                        <option>&deg;C</option>
+                        <option>&deg;F</option>
+                    </select>
+                </form>
+            </span>
+
+        </div>
+        <div id="this-week">
+            <div class="day-card">
+                <h3>Today</h3>
+                <img class="weather-icon" src="./assets/some_rain.png" alt="rainy weather">
+                <p>some rain</p>
+                <span class="high-low">
+                    <span class="high"><span class="temp">24</span>&deg;</span>
+                    <span class="low"><span class="temp">18</span>&deg;</span>
+                </span>
+            </div>
+            <div class="day-card">
+                <h3>Tomorrow</h3>
+                <img class="weather-icon" src="./assets/some_sun.png" alt="sunny day everything's A-OK">
+                <p>some sun</p>
+                <span class="high-low">
+                    <span class="high"><span class="temp">27</span>&deg;</span>
+                    <span class="low"><span class="temp">19</span>&deg;</span>
+                </span>
+            </div>
+            <div class="day-card">
+                <h3>Friday</h3>
+                <img class="weather-icon" src="./assets/some_clouds.png" alt="cloudy skies">
+                <p>some clouds</p>
+                <span class="high-low">
+                    <span class="high"><span class="temp">21</span>&deg;</span>
+                    <span class="low"><span class="temp">16</span>&deg;</span>
+                </span>
+            </div>
+            <div class="day-card">
+                <h3>Saturday</h3>
+                <img class="weather-icon" src="./assets/some_sun.png" alt="sunshine">
+                <p>some sun</p>
+                <span class="high-low">
+                    <span class="high"><span class="temp">26</span>&deg;</span>
+                    <span class="low"><span class="temp">21</span>&deg;</span>
+                </span>
+            </div>
+        </div>
+        <div id="annoying-footer">
+            <img id="cookie-icon" src="./assets/cookie.png">
+            <div id="cookie-message">
+                <h4>Stop! Cookie time</h4>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="#">Read more...</a></p>
+            </div>
+            <button onclick="removeMessage()">I Accept</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
